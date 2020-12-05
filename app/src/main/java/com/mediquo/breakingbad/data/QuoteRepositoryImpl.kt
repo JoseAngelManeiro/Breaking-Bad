@@ -8,7 +8,7 @@ import com.mediquo.breakingbad.domain.Either
 import com.mediquo.breakingbad.domain.model.Quote
 import com.mediquo.breakingbad.domain.repository.QuoteRepository
 
-class QuoteRepositoryImpl(
+internal class QuoteRepositoryImpl(
     private val apiClient: ApiClient,
     private val cache: QuoteCache,
     private val mapper: QuoteMapper

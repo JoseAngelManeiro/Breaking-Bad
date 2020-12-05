@@ -8,7 +8,7 @@ import com.mediquo.breakingbad.domain.Either
 import com.mediquo.breakingbad.domain.model.Character
 import com.mediquo.breakingbad.domain.repository.CharacterRepository
 
-class CharacterRepositoryImpl(
+internal class CharacterRepositoryImpl(
     private val apiClient: ApiClient,
     private val cache: CharacterCache,
     private val mapper: CharacterMapper
