@@ -2,7 +2,7 @@ package com.mediquo.breakingbad.data.entity
 
 import com.google.gson.annotations.SerializedName
 
-class QuoteEntity (
+data class QuoteEntity (
     @SerializedName("quote_id")
     val quoteId: Int,
     val quote: String,
