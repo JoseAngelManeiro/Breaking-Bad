@@ -30,12 +30,18 @@ dependencies {
     // ConstraintLayout
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
 
+    // Recyclerview
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+
     // Retrofit
     implementation "com.squareup.retrofit2:retrofit:2.4.0"
     implementation "com.squareup.retrofit2:converter-gson:2.4.0"
 
     // Koin
     implementation 'org.koin:koin-android-viewmodel:2.0.1'
+
+    // Picasso
+    implementation "com.squareup.picasso:picasso:2.71828"
 
     // Mockito
     testImplementation 'org.mockito:mockito-core:2.23.4'
@@ -44,4 +50,7 @@ dependencies {
 
     // JUnit
     testImplementation 'junit:junit:4.13'
+
+    // InstantTaskExecutorRule
+    testImplementation 'androidx.arch.core:core-testing:2.1.0'
 }

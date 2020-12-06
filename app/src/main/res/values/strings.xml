@@ -1,3 +1,6 @@
 <resources>
-    <string name="app_name">Breaking Bad</string>
+    <string name="app_name" translatable="false">Breaking Bad</string>
+    <string name="cancel">Cancelar</string>
+    <string name="retry">Reintentar</string>
+    <string name="character_photo">Foto del personaje</string>
 </resources>

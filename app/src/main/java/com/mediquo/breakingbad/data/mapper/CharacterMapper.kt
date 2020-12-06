@@ -18,7 +18,7 @@ class CharacterMapper: Mapper<CharacterEntity, Character> {
       nickname = dataModel.nickname,
       appearance = dataModel.appearance,
       portrayed = dataModel.portrayed,
-      category = dataModel.category.split(","),
+      category = dataModel.category,
       betterCallSaulAppearance = dataModel.betterCallSaulAppearance
     )
   }

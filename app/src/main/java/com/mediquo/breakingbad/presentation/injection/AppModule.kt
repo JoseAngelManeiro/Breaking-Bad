@@ -1,4 +1,4 @@
-package com.mediquo.breakingbad.presentation.di
+package com.mediquo.breakingbad.presentation.injection
 
 import com.mediquo.breakingbad.data.CharacterRepositoryImpl
 import com.mediquo.breakingbad.data.QuoteRepositoryImpl
@@ -10,6 +10,10 @@ import com.mediquo.breakingbad.data.mapper.CharacterMapper
 import com.mediquo.breakingbad.data.mapper.QuoteMapper
 import com.mediquo.breakingbad.domain.repository.CharacterRepository
 import com.mediquo.breakingbad.domain.repository.QuoteRepository
+import com.mediquo.breakingbad.presentation.executor.AsyncInteractorExecutor
+import com.mediquo.breakingbad.presentation.executor.BackgroundRunner
+import com.mediquo.breakingbad.presentation.executor.InteractorExecutor
+import com.mediquo.breakingbad.presentation.executor.MainRunner
 import org.koin.android.ext.koin.androidContext
 import org.koin.dsl.module
 
@@ -33,5 +37,10 @@ val appModule = module {
   }
   single<QuoteRepository> {
     QuoteRepositoryImpl(apiClient = get(), mapper = get(), cache = get())
+  }
+
+  // Executor
+  single<InteractorExecutor> {
+    AsyncInteractorExecutor(runOnBgThread = BackgroundRunner(), runOnMainThread = MainRunner())
   }
 }

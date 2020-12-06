@@ -12,6 +12,6 @@ data class Character (
     val nickname: String,
     val appearance: List<Int>?,
     val portrayed: String,
-    val category: List<String>,
+    val category: String,
     val betterCallSaulAppearance: List<Int>
 )
