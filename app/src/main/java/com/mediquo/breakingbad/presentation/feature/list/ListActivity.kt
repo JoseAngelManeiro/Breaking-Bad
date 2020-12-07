@@ -36,7 +36,9 @@ class ListActivity : AppCompatActivity() {
       )
     })
 
-    viewModel.loadCharacters()
+    if (savedInstanceState == null) {
+      viewModel.loadCharacters()
+    }
   }
 
   private fun setUpRecyclerView(characters: List<Character>) {

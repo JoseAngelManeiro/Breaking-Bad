@@ -49,7 +49,9 @@ class DetailActivity : AppCompatActivity() {
       )
     })
 
-    viewModel.loadDetailModel(name)
+    if (savedInstanceState == null) {
+      viewModel.loadDetailModel(name)
+    }
   }
 
   private fun setUpView(detailModel: DetailModel) {
