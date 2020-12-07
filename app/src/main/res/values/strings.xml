@@ -3,4 +3,12 @@
     <string name="cancel">Cancelar</string>
     <string name="retry">Reintentar</string>
     <string name="character_photo">Foto del personaje</string>
+    <string name="network_exception_message">No hay conexión</string>
+    <string name="service_exception_message">Ha ocurrido un error con el servidor</string>
+    <string name="unknown_exception_message">Ha ocurrido un error inesperado</string>
+    <string name="name">Nombre</string>
+    <string name="age">Edad</string>
+    <string name="breaking_bad_seasons">Temporadas en Breaking Bad</string>
+    <string name="better_call_saul_seasons">Temporadas en Better Call Saul</string>
+    <string name="famous_quotes">Frases célebres</string>
 </resources>

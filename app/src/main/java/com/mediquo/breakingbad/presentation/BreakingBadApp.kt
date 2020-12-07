@@ -2,6 +2,7 @@ package com.mediquo.breakingbad.presentation
 
 import android.app.Application
 import com.mediquo.breakingbad.presentation.injection.appModule
+import com.mediquo.breakingbad.presentation.injection.detailModule
 import com.mediquo.breakingbad.presentation.injection.listModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
@@ -16,7 +17,8 @@ class BreakingBadApp: Application() {
             androidContext(this@BreakingBadApp)
             modules(listOf(
                 appModule,
-                listModule
+                listModule,
+                detailModule
             ))
         }
     }

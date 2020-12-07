@@ -15,7 +15,7 @@
       android:layout_height="36dp"
       android:contentDescription="@string/character_photo"
       app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toTopOf="parent"
       tools:src="@drawable/ic_avatar_placeholder"/>
 
@@ -26,8 +26,8 @@
       android:layout_marginStart="@dimen/default_padding"
       android:textStyle="bold"
       android:textSize="@dimen/text_default_size"
-      app:layout_constraintLeft_toRightOf="@id/photo_image_view"
-      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintStart_toEndOf="@id/photo_image_view"
+      app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintTop_toTopOf="parent"
       tools:text="Heisenberg"/>
 
@@ -35,8 +35,8 @@
       android:id="@+id/name_text_view"
       android:layout_width="0dp"
       android:layout_height="wrap_content"
-      app:layout_constraintLeft_toLeftOf="@id/nick_text_view"
-      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintStart_toStartOf="@id/nick_text_view"
+      app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintTop_toBottomOf="@id/nick_text_view"
       app:layout_constraintBottom_toBottomOf="parent"
       tools:text="Walter White"/>

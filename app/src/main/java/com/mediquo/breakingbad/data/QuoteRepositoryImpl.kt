@@ -18,7 +18,7 @@ internal class QuoteRepositoryImpl(
         return object : PrefetchLocalData<List<QuoteEntity>, List<Quote>>() {
             override fun loadFromLocal() = cache.get(name)
 
-            override fun shouldFetch(data: List<Quote>?) = data.isNullOrEmpty()
+            override fun shouldFetch(data: List<Quote>?) = !cache.isValid()
 
             override fun loadFromService() = apiClient.getQuotes()
 

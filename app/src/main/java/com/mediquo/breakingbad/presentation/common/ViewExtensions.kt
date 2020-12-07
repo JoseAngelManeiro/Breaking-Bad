@@ -7,14 +7,22 @@ import androidx.annotation.LayoutRes
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.mediquo.breakingbad.R
+import com.mediquo.breakingbad.domain.exception.NetworkConnectionException
+import com.mediquo.breakingbad.domain.exception.ServiceException
 
 fun AppCompatActivity.handleException(
     exception: Exception,
     cancel: () -> Unit = {},
     retry: () -> Unit = {}
 ) {
+    val message: String = when(exception) {
+        is NetworkConnectionException -> getString(R.string.network_exception_message)
+        is ServiceException -> getString(R.string.service_exception_message)
+        else -> getString(R.string.unknown_exception_message)
+    }
+
     AlertDialog.Builder(this)
-        .setMessage(exception.message)
+        .setMessage(message)
         .setNegativeButton(getString(R.string.cancel)) { dialog, _ ->
             dialog.dismiss()
             cancel()

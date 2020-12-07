@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.feature.detail.DetailActivity">
+
+  <androidx.core.widget.NestedScrollView
+      android:id="@+id/detail_container"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/default_padding">
+
+      <ImageView
+          android:id="@+id/photo_image_view"
+          android:layout_width="100dp"
+          android:layout_height="140dp"
+          android:contentDescription="@string/character_photo"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent"
+          tools:src="@drawable/ic_avatar_placeholder"/>
+
+      <TextView
+          style="@style/LabelStyle"
+          android:id="@+id/name_label_text_view"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="@dimen/small_padding"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/photo_image_view"
+          android:text="@string/name"/>
+
+      <TextView
+          android:id="@+id/name_value_text_view"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:textSize="@dimen/text_default_size"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/name_label_text_view"
+          tools:text="Bryan Cranston"/>
+
+      <TextView
+          style="@style/LabelStyle"
+          android:id="@+id/age_label_text_view"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="@dimen/small_padding"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/name_value_text_view"
+          android:text="@string/age"/>
+
+      <TextView
+          android:id="@+id/age_value_text_view"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:textSize="@dimen/text_default_size"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/age_label_text_view"
+          tools:text="58"/>
+
+      <TextView
+          style="@style/LabelStyle"
+          android:id="@+id/breaking_bad_label_text_view"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="@dimen/small_padding"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/age_value_text_view"
+          android:text="@string/breaking_bad_seasons"/>
+
+      <TextView
+          android:id="@+id/breaking_bad_value_text_view"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:textSize="@dimen/text_default_size"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/breaking_bad_label_text_view"
+          tools:text="1, 2, 3"/>
+
+      <TextView
+          style="@style/LabelStyle"
+          android:id="@+id/better_call_saul_label_text_view"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="@dimen/small_padding"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/breaking_bad_value_text_view"
+          android:text="@string/better_call_saul_seasons"/>
+
+      <TextView
+          android:id="@+id/better_call_saul_value_text_view"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:textSize="@dimen/text_default_size"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/better_call_saul_label_text_view"
+          tools:text="1, 2"/>
+
+      <TextView
+          style="@style/LabelStyle"
+          android:id="@+id/quotes_label_text_view"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="@dimen/small_padding"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/better_call_saul_value_text_view"
+          android:text="@string/famous_quotes"/>
+
+      <androidx.recyclerview.widget.RecyclerView
+          android:id="@+id/quotes_recycler_view"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:visibility="visible"
+          android:scrollbars="none"
+          android:nestedScrollingEnabled="false"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/quotes_label_text_view"
+          app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+          tools:listitem="@layout/item_quote" />
+      
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+  </androidx.core.widget.NestedScrollView>
+
+  <ProgressBar
+      android:id="@+id/progress_bar"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center"
+      android:visibility="gone"/>
+
+</FrameLayout>
+

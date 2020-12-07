@@ -7,6 +7,7 @@ import android.widget.LinearLayout
 import androidx.recyclerview.widget.DividerItemDecoration
 import com.mediquo.breakingbad.R
 import com.mediquo.breakingbad.domain.model.Character
+import com.mediquo.breakingbad.presentation.common.goToDetail
 import com.mediquo.breakingbad.presentation.common.handleException
 import kotlinx.android.synthetic.main.activity_list.*
 import org.koin.android.viewmodel.ext.android.viewModel
@@ -48,7 +49,7 @@ class ListActivity : AppCompatActivity() {
     }
     recycler_view.adapter = CharactersAdapter(
       items = recyclerItems,
-      onItemClickListener = {}
+      onItemClickListener = { goToDetail(it.name) }
     )
     recycler_view.addItemDecoration(
       DividerItemDecoration(recycler_view.context, LinearLayout.VERTICAL))

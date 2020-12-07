@@ -13,5 +13,7 @@ class QuoteCache(private val map: MutableMap<String, MutableList<Quote>> = mutab
     }
   }
 
-  fun get(key: String): List<Quote>? = map[key]
+  fun get(key: String): List<Quote> = map[key].orEmpty()
+
+  fun isValid() = map.isNotEmpty()
 }

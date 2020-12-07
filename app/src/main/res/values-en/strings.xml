@@ -1,0 +1,13 @@
+<resources>
+    <string name="cancel">Cancel</string>
+    <string name="retry">Retry</string>
+    <string name="character_photo">Character photo</string>
+    <string name="network_exception_message">No network connection</string>
+    <string name="service_exception_message">A server error has occurred</string>
+    <string name="unknown_exception_message">An unexpected error has occurred</string>
+    <string name="name">Name</string>
+    <string name="age">Age</string>
+    <string name="breaking_bad_seasons">Breaking Bad seasons</string>
+    <string name="better_call_saul_seasons">Better Call Saul seasons</string>
+    <string name="famous_quotes">Famous quotes</string>
+</resources>
